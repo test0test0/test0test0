@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'test-01';
+  src: url("../css/fonts/test-01/test-01.eot");
+  src: local("☺"), url("../css/fonts/test-01/test-01.woff") format("woff"), url("../css/fonts/test-01/test-01.ttf") format("truetype"), url("../css/fonts/test-01/test-01.svg") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+body {
+  font: 20px / 29px "helvetica", sans-serif;
+  font-weight: 500;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; }
+
+h1 {
+  font-size: 20px;
+  color: #000;
+  line-height: 1.5; }
+
+.custom {
+  font-family: "test-01"; }
+
+.full {
+  position: absolute;
+  z-index: 99999999;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff6000; }
+  .full p {
+    position: absolute;
+    width: 800px;
+    height: 370px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-weight: 700;
+    color: #0600b7; }
+
+.hidden {
+  display: none; }
+
+#left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden; }
+  #left .branding {
+    position: relative;
+    width: 240px;
+    height: 100px;
+    background-color: blue;
+    background: url("../images/test.png") center no-repeat;
+    background-size: cover; }
+  #left .product-description {
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    right: 10px;
+    z-index: 9999;
+    text-align: right; }
+    #left .product-description p {
+      position: absolute;
+      top: 50%;
+      right: -165px;
+      transform: translate(-50%, -50%);
+      width: 360px; }
+    #left .product-description .title {
+      font-weight: 400;
+      font-size: 25px; }
+  #left .social {
+    position: absolute;
+    bottom: 40px;
+    left: 30px; }
+    #left .social a {
+      text-decoration: none;
+      color: black; }
+  #left .GIF1 {
+    position: absolute;
+    top: 160px;
+    right: 160px; }
+    #left .GIF1 #GIF1 {
+      width: 140px; }
+  #left .GIF2 {
+    position: absolute;
+    bottom: 140px;
+    left: 30px;
+    z-index: 9999; }
+    #left .GIF2 #GIF2 {
+      width: 130px; }
+  #left .GIF3 {
+    position: absolute;
+    bottom: 140px;
+    right: 40px; }
+    #left .GIF3 #GIF3 {
+      width: 200px; }
+
+.right {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%; }
+
+.image-over {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: url("../images/test.jpg") center no-repeat;
+  background-size: cover; }
+
+.image-below {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: url("../images/test.jpg") center no-repeat;
+  background-size: cover; }
+
+#right:hover .image-below {
+  display: none; }
+
+.GIF1,
+.GIF2,
+.GIF3 {
+  text-decoration: none;
+  position: relative;
+  z-index: 999; }
+
+.GIF1 span,
+.GIF2 span,
+.GIF3 span {
+  display: none; }
+
+.GIF1:hover span,
+.GIF2:hover span,
+.GIF3:hover span {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  overflow: hidden; }
+
+.hide {
+  display: none; }
+
+/*# sourceMappingURL=styles.css.map */

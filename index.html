@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST©</title>
+    <link type="text/css" rel="stylesheet" href="static/css/styles.css">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="static/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="static/images/favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+
+<!-- Section Left -->
+<section id="left">
+
+	<div class="branding"></div>
+
+	<div class="product-description hidden">
+		<p>
+			<span class="custom title">VESTE GIGI</span>
+			<br><br>
+			ce mois ci. Elle est bleue.<br>
+			comme le bleu de travail ou le keikogi.<br>
+			100% coton.<br>
+			La ceinture est noire, 1e dan, jumelée au gilet de sécurité orange conforme aux normes EN ISO 20471 : 2013 et EN13688. Orange fluo avec bandes réfléchissantes, accroît votre visibilité jusqu’à 230m sur la route en cas d’arrêt d’urgence ou lors de<br>
+			la pratique de deux-roues.<br>
+			Col/ceinture : 100% polyester.<br>
+			Taille unique. Ħ
+		</p>
+	</div>
+
+
+
+	<a class="GIF1">
+	    <img id="GIF1" src="static/images/test01-01.gif">
+	    <!-- <span id="tooltip-span1">
+	        <img src="static/images/test.jpg" width="300px;" />
+	    </span> -->
+	</a>
+
+	<a class="GIF2">
+	    <img id="GIF2" src="static/images/test01-02.jpg">
+	    <span id="tooltip-span2">
+	        <img src="static/images/tooltip-test01-02.jpg" width= "380px;"  />
+	    </span>
+	</a>
+
+	<a class="GIF3">
+	    <img id="GIF3" src="static/images/test01-03.gif">
+	    <span id="tooltip-span3">
+	        <img src="static/images/test.jpg" width="200px;"/>
+	    </span>
+	</a>
+
+	<div class="social">
+		<ul>
+			<li class="custom"><a href="mailto:allotestemail@gmail.com?Subject=Allo%20Test%20!" target="_top">Contact us</a></li>
+			<li class="custom"><a href="http://www.tu-peux-pas-test.tumblr.com" target="blank">Instagram</a></li>
+			<li class="custom"><a href="http://www.tu-peux-pas-test.tumblr.com" target="blank">Tumblr</a></li>
+		</ul>
+	</div>
+
+
+</section>
+
+
+<!-- Section Right -->
+<section class="right">
+	<div class="image-over"></div>
+	<div class="image-below"></div>
+</section>
+
+
+<!-- Full Page -->
+<section class="full hidden">
+	<div class="about-test">
+		<div class="back">
+			back
+		</div>
+
+		<p>
+			Test n.m un essai, une expérimentation.
+			<br><br>
+			TEST est une proposition vestimentaire qui puise son inspiration dans ce qui l'entoure :
+			le quotidien, les imaginaires collectifs, les coutumes, la routine.
+			<br><br>
+			Partant du constat que tout habit est un uniforme, TEST développe l’uniforme des déformés;
+			ceux dont la forme est multiple et singulière.
+			<br><br>
+			Nous confectionnons avec le plus grand soin, un objet limité dans le nombre et dans le temps. Ici, demain, une nouvelle proposition apparaîtra. Une nouvelle forme remplaçant la précédente.
+			<br><br>
+			Il ne s'agit pas d'une marque, il s'agit d'un TEST.
+
+
+		</p>
+	</div>
+
+</section>
+
+
+<script src="static/js/jquery-1.11.3.min.js"></script>
+<script src="static/js/main.js"></script>
+
+
+
+<script>
+
+var tooltipSpan0 = document.getElementById('tooltip-span0');
+var tooltipSpan1 = document.getElementById('tooltip-span1');
+var tooltipSpan2 = document.getElementById('tooltip-span2');
+var tooltipSpan3 = document.getElementById('tooltip-span3');
+
+
+window.onmousemove = function (e) {
+    var x = e.clientX,
+        y = e.clientY;
+
+
+
+    // tooltipSpan1.style.top = (y + 20) + 'px';
+    // tooltipSpan1.style.left = (x + 20) + 'px';
+
+    tooltipSpan2.style.top = (y - 450) + 'px';
+    tooltipSpan2.style.left = (x + 20) + 'px';
+
+    tooltipSpan3.style.top = (y - 200) + 'px';
+    tooltipSpan3.style.left = (x + 20) + 'px';
+};
+
+
+
+
+</script>
+
+
+<script>
+
+$(document).ready(function(){
+
+// Show Test Infos
+
+	$(".branding").click(function() {
+		$(".full").removeClass("hidden");
+	});
+
+	$(".back").click(function() {
+		$(".full").addClass("hidden");
+	});
+
+
+	// Hover right section to show produt description
+
+	$( ".right" ).mouseenter(function() {
+		$(".product-description").removeClass("hidden");
+		$(".GIF1").addClass("hide");
+		$(".GIF2").addClass("hide");
+		$(".GIF3").addClass("hide");
+	});
+	$( ".right" ).mouseleave(function() {
+		$(".product-description").addClass("hidden");
+		$(".GIF1").removeClass("hide");
+		$(".GIF2").removeClass("hide");
+		$(".GIF3").removeClass("hide");
+	});
+
+
+
+})
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
