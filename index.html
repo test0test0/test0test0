@@ -10,6 +10,13 @@
 
 <body>
 
+
+<!-- Centered Image -->
+<div class="centered hidden">
+</div>
+
+
+
 <!-- Section Left -->
 <section id="left">
 
@@ -31,6 +38,9 @@
 
 
 
+
+
+
 	<a class="GIF1">
 	    <img id="GIF1" src="static/images/test01-01.gif">
 	    <!-- <span id="tooltip-span1">
@@ -48,14 +58,14 @@
 	<a class="GIF3">
 	    <img id="GIF3" src="static/images/test01-03.gif">
 	    <span id="tooltip-span3">
-	        <img src="static/images/test.jpg" width="200px;"/>
+	        <!-- <img src="static/images/test.jpg" width="200px;"/> -->
 	    </span>
 	</a>
 
 	<div class="social">
 		<ul>
 			<li class="custom"><a href="mailto:allotestemail@gmail.com?Subject=Allo%20Test%20!" target="_top">Contact us</a></li>
-			<li class="custom"><a href="http://www.tu-peux-pas-test.tumblr.com" target="blank">Instagram</a></li>
+			<li class="custom"><a href="https://www.instagram.com/allo_test/" target="blank">Instagram</a></li>
 			<li class="custom"><a href="http://www.tu-peux-pas-test.tumblr.com" target="blank">Tumblr</a></li>
 		</ul>
 	</div>
@@ -75,23 +85,11 @@
 <section class="full hidden">
 	<div class="about-test">
 		<div class="back">
-			back
+			<img src="static/images/back.png" style="width: 40px; margin: 20px; cursor: pointer;">
 		</div>
 
 		<p>
-			Test n.m un essai, une expérimentation.
-			<br><br>
-			TEST est une proposition vestimentaire qui puise son inspiration dans ce qui l'entoure :
-			le quotidien, les imaginaires collectifs, les coutumes, la routine.
-			<br><br>
-			Partant du constat que tout habit est un uniforme, TEST développe l’uniforme des déformés;
-			ceux dont la forme est multiple et singulière.
-			<br><br>
-			Nous confectionnons avec le plus grand soin, un objet limité dans le nombre et dans le temps. Ici, demain, une nouvelle proposition apparaîtra. Une nouvelle forme remplaçant la précédente.
-			<br><br>
-			Il ne s'agit pas d'une marque, il s'agit d'un TEST.
-
-
+			Test n.m un essai, une expérimentation. TEST est une proposition vestimentaire qui puise son inspiration dans ce qui l'entoure : le quotidien, les imaginaires collectifs, les coutumes, la routine. Partant du constat que tout habit est un uniforme, TEST développe l’uniforme des déformés; ceux dont la forme est multiple et singulière. Nous confectionnons avec le plus grand soin, un objet limité dans le nombre et dans le temps. Ici, demain, une nouvelle proposition apparaîtra. Une nouvelle forme remplaçant la précédente. Il ne s'agit pas d'une marque, il s'agit d'un TEST.
 		</p>
 	</div>
 
@@ -143,20 +141,37 @@ $(document).ready(function(){
 		$(".full").removeClass("hidden");
 	});
 
-	$(".back").click(function() {
+	$(".back img").click(function() {
 		$(".full").addClass("hidden");
 	});
 
 
+	// Hover to show centered image-over
+	$("#GIF3").mouseenter(function() {
+		$(".centered").removeClass("hidden");
+	});
+	$("#GIF3").mouseleave(function() {
+		$(".centered").addClass("hidden");
+	});
+	
+	$(".centered").mouseenter(function() {
+		$(".centered").removeClass("hidden");
+	});
+	$(".centered").mouseleave(function() {
+		$(".centered").addClass("hidden");
+	});
+
+
+
 	// Hover right section to show produt description
 
-	$( ".right" ).mouseenter(function() {
+	$(".right").mouseenter(function() {
 		$(".product-description").removeClass("hidden");
 		$(".GIF1").addClass("hide");
 		$(".GIF2").addClass("hide");
 		$(".GIF3").addClass("hide");
 	});
-	$( ".right" ).mouseleave(function() {
+	$(".right").mouseleave(function() {
 		$(".product-description").addClass("hidden");
 		$(".GIF1").removeClass("hide");
 		$(".GIF2").removeClass("hide");
